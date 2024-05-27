@@ -1,6 +1,5 @@
 import requests
 import os
-from config import API_KEY  # Import the API key from config.py
 from dotenv import load_dotenv, dotenv_values 
 dotenv_path = 'secrets.env'
 load_dotenv(dotenv_path)
@@ -8,7 +7,7 @@ def get_ip_info(ip_address):
     url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip_address}"
     headers = {
         "accept": "application/json",
-        "x-apikey": API_KEY
+        "x-apikey": os.getenv("VT_API_KEY")
     }
 
     response = requests.get(url, headers=headers)
