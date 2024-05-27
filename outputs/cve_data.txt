@@ -1,0 +1,18 @@
+{
+    "cve_id": "CVE-2024-36081",
+    "summary": "Westermo EDW-100 devices through 2024-05-03 allow an unauthenticated user to download a configuration file containing a cleartext password. NOTE: this is a serial-to-Ethernet converter that should not be placed at the edge of the network.",
+    "cvss": 9.8,
+    "cvss_version": 3.0,
+    "cvss_v2": null,
+    "cvss_v3": 9.8,
+    "epss": null,
+    "ranking_epss": null,
+    "kev": false,
+    "propose_action": null,
+    "ransomware_campaign": null,
+    "references": [
+        "https://www.westermo.com/-/media/Files/Cyber-security/westermo_sa_EDW-100_24-05.pdf"
+    ],
+    "published_time": "2024-05-19T20:15:08",
+    "cpes": []
+}
