@@ -76,16 +76,25 @@ def get_hash_info(hash):
 
 def get_cve_info(cve_id):
     cve=requests.get(f"https://cvedb.shodan.io/cve/{cve_id}").json()
-    cve_data = json.dumps(cve, indent=4)
+    # cve_data = json.dumps(cve, indent=4)
+    cve_data = {
+        "cve_id": cve["cve_id"],
+        "summary": cve["summary"],
+        "cvss": cve["cvss"],
+        "cvss_version": cve["cvss_version"],
+        "published_time": cve["published_time"],
+        "references": cve["references"]
+    }
     with open('outputs/cve_data.txt', 'w') as file:
-        file.write(cve_data)
+        for key, value in cve_data.items():
+            file.write('%s:%s\n' % (key, value))
     return cve_data
 
 
 
 
 # print(get_ip_info("188.114.97.3" ))
-# print(get_cve_info("CVE-2024-36081"))
+# print(get_cve_info("CVE-2016-0741"))
 # print(get_domain_info("www.google.com"))
 # print(get_url_info("http://vxvault.net/ViriList.php"))
 # print(get_hash_info("9f01d4442c495c7128649b98201187bc0c58dedd"))

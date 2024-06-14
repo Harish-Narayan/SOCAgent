@@ -1,18 +1,6 @@
-{
-    "cve_id": "CVE-2024-36081",
-    "summary": "Westermo EDW-100 devices through 2024-05-03 allow an unauthenticated user to download a configuration file containing a cleartext password. NOTE: this is a serial-to-Ethernet converter that should not be placed at the edge of the network.",
-    "cvss": 9.8,
-    "cvss_version": 3.0,
-    "cvss_v2": null,
-    "cvss_v3": 9.8,
-    "epss": null,
-    "ranking_epss": null,
-    "kev": false,
-    "propose_action": null,
-    "ransomware_campaign": null,
-    "references": [
-        "https://www.westermo.com/-/media/Files/Cyber-security/westermo_sa_EDW-100_24-05.pdf"
-    ],
-    "published_time": "2024-05-19T20:15:08",
-    "cpes": []
-}
+cve_id:CVE-2016-0741
+summary:slapd/connection.c in 389 Directory Server (formerly Fedora Directory Server) 1.3.4.x before 1.3.4.7 allows remote attackers to cause a denial of service (infinite loop and connection blocking) by leveraging an abnormally closed connection.
+cvss:7.5
+cvss_version:3.0
+published_time:2016-04-19T21:59:06
+references:['http://directory.fedoraproject.org/docs/389ds/releases/release-1-3-4-7.html', 'http://rhn.redhat.com/errata/RHSA-2016-0204.html', 'http://www.oracle.com/technetwork/topics/security/linuxbulletinjan2016-2867209.html', 'http://www.securityfocus.com/bid/82343', 'https://fedorahosted.org/389/changeset/cd45d032421b0ecf76d8cbb9b1c3aeef7680d9a2/', 'https://fedorahosted.org/389/ticket/48412']

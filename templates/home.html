@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block title %} Home - {{ super() }} {% endblock %}
+{% block content %}
+<h4 id="file-name">"Upload your CSV to get started.."</h4>
+<div class="container">
+<form action="/get_response" method="POST" enctype="multipart/form-data">
+    <div class="input-group">
+        <label for="attachment">
+            <i class="fas fa-paperclip"></i> <!-- Font Awesome icon for attachment -->
+        </label>
+        <input type="file" id="attachment" name="attachment" accept=".csv">
+        <textarea name="user_input" placeholder="Enter your message"></textarea>
+        <div class="buttons">
+            <button id="start" type="submit">Send</button>
+            <button id="stop" type="submit">Stop</button>
+        </div>
+    </div>
+</form>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/autosize@4.0.2/dist/autosize.min.js"></script>
+
+{% endblock %}

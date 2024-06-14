@@ -12,7 +12,7 @@ from sqlalchemy import create_engine
 
 
 def answer_using_sql_agent(question):
-        df = pd.read_csv("cybersecurity_attacks.csv")
+        df = pd.read_csv("data.csv")
         print(df.shape)
         print(df.columns.tolist())
 

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header{
+    text-align: center;
+}
+.message.user .input-span {
+    display: inline-block;
+    color: blue; /* Optional: Different color for user input */
+    margin-bottom: 20px;
+}
+
+.message.user .output-span {
+    display: inline-block;
+    color: green; /* Optional: Different color for output text */
+}
+
+.space {
+    display: block;
+    height: 5px; /* 5px space */
+}
+
+.message p {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.curved-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    max-width: 100%; /* Add this line */
+    box-sizing: border-box; /* Add this line */
+}
+
+.input-span,
+.output-span {
+    max-width: 100%; /* Add this line */
+    overflow-wrap: break-word; /* Add this line */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+textarea[name="user_input"] {
+    flex-grow: 1;
+    width: 400px; /* Adjust width to allow space for buttons */
+    height: auto; /* Initial height set to auto */
+    min-height: 25px; /* Minimum height */
+    max-height: 300px; /* Optional: Maximum height to prevent it from growing too tall */
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Set border radius for curved corners */
+    margin-right: 10px;
+    resize: none; /* Disable manual resizing */
+    font-size: 15px;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stop {
+    background-color: red;
+    display: none;
+}
+
+.fa-paperclip {
+    font-size: 18px;
+}
+
+footer {
+    text-align: center; /* Align the footer content to the center */
+    margin-top: 20px; /* Add margin to create space between content and footer */
+}
